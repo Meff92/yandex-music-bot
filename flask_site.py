@@ -30,5 +30,5 @@ async def track(id):
     """
     return render_template_string(html)
 
-
-app.run(host=host, port=port)
+def run_site():
+    app.run(host=host, port=port)
