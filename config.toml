@@ -6,7 +6,7 @@ server = "localhost"
 port = 27017
 
 [server]
-address = "http://127.0.0.1:8000/"
+address = "https://yandex-music-bot-production.up.railway.app:5000/"
 enabled = true
 host = "0.0.0.0"
-port = 8000
+port = 5000
