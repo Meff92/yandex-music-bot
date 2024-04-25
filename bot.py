@@ -291,4 +291,3 @@ async def run_bot():
     bot = Bot(token)
     await dp.start_polling(bot)
 
-asyncio.run(run_bot())
