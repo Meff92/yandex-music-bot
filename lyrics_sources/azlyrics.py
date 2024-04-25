@@ -10,7 +10,7 @@ HEADER = {"User-Agent": "Mozilla/5.0"}
 base_url = "https://www.google.com/search?q="
 
 
-def get_html(search_url: str, header: dict[str, str] = HEADER) -> str:
+def get_html(search_url, header) -> str:
     """Return html text from given search_url."""
     try:
         req = Request(search_url, data=None, headers=header)
