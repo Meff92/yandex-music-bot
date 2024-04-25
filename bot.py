@@ -10,11 +10,11 @@ from aiogram.utils.keyboard import InlineKeyboardBuilder
 import yt_dlp
 from pymongo import MongoClient
 from lyrics_sources import azlyrics, genius, google
-from config_reader import address, mongodb_server, mongodb_port, token
+from config_reader import address, token
 import asyncio
 import os
 
-
+mongo_private_url = os.environ.get("MONGO_PRIVATE_URL")
 
 ydl_opts = {
     "format": "bestaudio/best",
@@ -36,7 +36,7 @@ dp = Dispatcher()
 
 try:
     logging.info("Connecting to MongoDB")
-    client = MongoClient(mongodb_server, mongodb_port)
+    client = MongoClient(mongo_private_url)
     db = client["music"]
     queries = db["queries"]
     tracks = db["tracks"]
